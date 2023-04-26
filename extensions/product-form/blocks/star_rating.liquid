@@ -1,0 +1,79 @@
+<form class="prod_form">
+  <label for="title">Title</label><br>
+  <input
+    type="text"
+    id="title"
+    name="title"
+    value="Product Title"><br>
+  <label for="description">Description</label><br>
+  <input
+    type="text"
+    id="description"
+    name="description"
+    value="Product Description"><br>
+  <label for="tags">Tags</label><br>
+  <input
+    type="text"
+    id="tags"
+    name="tags"
+    value="Product Tags"><br>
+  <label for="images">Images</label><br>
+  <input
+    type="text"
+    id="images"
+    name="images"
+    value="Product Images"><br>
+  <label for="sku">SKU</label><br>
+  <input
+    type="text"
+    id="sku"
+    name="sku"
+    value="Product SKU"><br>
+  <label for="price">Price</label><br>
+  <input
+    type="text"
+    id="price"
+    name="price"
+    value="Product Price"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+<script>
+
+  document.querySelector('.prod_form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const response = await fetch("/apps/prapp/products/populate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+
+      },
+      body: JSON.stringify(
+        {
+          title: "test",
+          description: "desc",
+          tags: "tag",
+          images: "img",
+          sku: "121212",
+          price: "32323"
+        }
+      )
+
+    });
+    if (response.ok) {
+
+      alert("ddddd")
+    } else {
+      alert("Error HTTP: " + response.status);
+    }
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Product Form",
+    "target": "section"
+
+  }
+{% endschema %}
