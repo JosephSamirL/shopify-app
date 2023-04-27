@@ -1,3 +1,32 @@
+# Creating a Shopify Store with Authenticated Route /dashboard and an App Product-Add
+
+To create a Shopify store with an authenticated route /dashboard and an app product-add which has an extension that sends a proxied post request to Shopify admin API, follow the below steps:
+
+1. Clone the Shopify-App repository from https://github.com/JosephSamirL/shopify-app to your local machine.
+2. Run the Shopify-App project locally on your machine.
+3. In the Shopify-App project, add an authenticated route named "/dashboard" to your Shopify store.
+4. Create an app named "Product-Add" in your Shopify store and configure it to use the "/dashboard" route.
+5. Add an extension to the "Product-Add" app that sends a proxied post request to the Shopify admin API.
+6. Test the proxied endpoint from the admin dashboard via the app.
+
+# Running Shopify-App Locally
+
+To run the Shopify-App project locally, follow the below instructions:
+
+1. Clone the Shopify-App repository from https://github.com/JosephSamirL/shopify-app to your local machine.
+2. Install the dependencies by running the command `npm install` in the root directory of the Shopify-App project.
+3. Run the project by running the command `npm run dev` in the root directory of the Shopify-App project.
+
+# Testing Unproxied Endpoint from Admin Dashboard
+
+To test the unproxied endpoint from the admin dashboard via the app, follow the below instructions:
+
+1. Log in to your Shopify store's admin dashboard.
+2. Navigate to the "Product-Add" app.
+3. Use the app to test the unproxied endpoint.
+
+
+
 # Shopify App Template - Node
 
 This is a template for building a [Shopify app](https://shopify.dev/docs/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.
